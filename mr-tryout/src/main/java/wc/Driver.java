@@ -48,6 +48,7 @@ public class Driver {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "wc");
 
+        job.setJarByClass(Driver.class);
         job.setMapperClass(XMapper.class);
         job.setCombinerClass(YReducer.class);
         job.setReducerClass(YReducer.class);
