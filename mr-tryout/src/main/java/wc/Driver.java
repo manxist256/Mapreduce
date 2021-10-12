@@ -14,9 +14,9 @@ import java.io.IOException;
 
 public class Driver {
 
-    public static class YReducer extends Reducer<javax.xml.soap.Text, IntWritable, javax.xml.soap.Text, IntWritable> {
+    public static class YReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
-        public void reduce(javax.xml.soap.Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+        public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 
             final IntWritable result = new IntWritable();
 
